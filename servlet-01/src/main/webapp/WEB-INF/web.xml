@@ -10,14 +10,13 @@
         如果找不到，就会走默认的处理请求
     -->
 
+    <!--hello页面-->
     <!--注册Servlet-->
     <servlet>
         <servlet-name>hello</servlet-name>
         <servlet-class>com.achacker.servlet.HelloServlet</servlet-class>
     </servlet>
-
     <!--Servlet请求路径-->
-    <!--默认请求路径-->
     <!--可以自定义后缀请求规则，不过*前面不能加映射路径-->
     <servlet-mapping>
         <servlet-name>hello</servlet-name>
@@ -25,11 +24,13 @@
         <url-pattern>/hello/*</url-pattern>
     </servlet-mapping>
 
-    <!--404-->
+    <!--404页面-->
+    <!--注册Servlet-->
     <servlet>
         <servlet-name>error</servlet-name>
         <servlet-class>com.achacker.servlet.ErrorServlet</servlet-class>
     </servlet>
+    <!--Servlet请求路径-->
     <servlet-mapping>
         <servlet-name>error</servlet-name>
         <url-pattern>/*</url-pattern>
