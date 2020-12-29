@@ -23,6 +23,16 @@
         <url-pattern>/s2</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>com.achacker.filter.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/s2</url-pattern>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>SessionDemo03</servlet-name>
         <servlet-class>com.achacker.servlet.SessionDemo03</servlet-class>

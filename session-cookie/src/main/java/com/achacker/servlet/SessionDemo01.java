@@ -13,11 +13,6 @@ import java.io.IOException;
 public class SessionDemo01 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // fix code mess
-        req.setCharacterEncoding("UTF-8");
-        resp.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html;charset=utf-8");
-
         // get session
         HttpSession session = req.getSession();
         // Store to session

@@ -13,20 +13,16 @@ import java.io.IOException;
 public class SessionDemo02 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // fix code mess
-        req.setCharacterEncoding("UTF-8");
-        resp.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html;charset=utf-8");
-
         // get session
         HttpSession session = req.getSession();
         Persion persion = (Persion) session.getAttribute("name");
         if(persion!=null)
         {
             resp.getWriter().write(persion.toString());
+            resp.getWriter().write("<h1>No session - 有 session</h1>");
         }else
         {
-            resp.getWriter().write("<h1>No session</h1>");
+            resp.getWriter().write("<h1>No session - 无 session</h1>");
         }
     }
 
