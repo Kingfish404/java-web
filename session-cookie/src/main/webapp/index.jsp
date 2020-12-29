@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8"  %>
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -8,6 +9,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Hello,World!</h2>
+<%= new String("hello,world") %>
+${String("hello")}
+<%
+%>
+    <h2>你好，世界!</h2>
 </body>
 </html>
