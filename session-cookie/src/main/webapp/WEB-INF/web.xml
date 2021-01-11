@@ -42,4 +42,9 @@
         <url-pattern>/s3</url-pattern>
     </servlet-mapping>
 
+    <session-config>
+        <!--设定session过期时间-->
+        <session-timeout>10</session-timeout>
+    </session-config>
+
 </web-app>

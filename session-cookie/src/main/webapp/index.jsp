@@ -12,6 +12,7 @@
 <%= new String("hello,world") %>
 ${String("hello")}
 <%
+    // 这里可以放java代码
 %>
     <h2>你好，世界!</h2>
 </body>
