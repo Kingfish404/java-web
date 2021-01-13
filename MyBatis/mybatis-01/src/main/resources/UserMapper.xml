@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.achacker.dao.UserMapper">
+    <!--查询语句-->
+
+    <select id="getUserLike" parameterType="map" resultType="com.achacker.pojo.User">
+        select `id`, `name`, `pwd`
+        from mybatis.user where `name` like #{name};
+    </select>
+
+    <select id="getUserList" resultType="com.achacker.pojo.User">
+        select `id`, `name`, `pwd`
+        from mybatis.user;
+    </select>
+
+    <select id="getUserById" parameterType="int" resultType="com.achacker.pojo.User">
+        select `id`, `name`, `pwd`
+        from mybatis.user
+        where id = #{id};
+    </select>
+
+    <!-- 对象中的属性，可以直接取到 -->
+    <insert id="addUser" parameterType="com.achacker.pojo.User">
+        insert into mybatis.user (id, name, pwd)
+            value (#{id},#{name},#{pwd});
+    </insert>
+
+    <insert id="updateUser" parameterType="com.achacker.pojo.User">
+        update mybatis.user
+        set name=#{name},
+            pwd=#{pwd}
+        where id = #{id};
+    </insert>
+
+    <delete id="deleteUser" parameterType="int">
+        delete
+        from mybatis.user
+        where id = #{id};
+    </delete>
+</mapper>
