@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- a singleton-scoped bean injected with a proxy to the above bean -->
+    <bean id="hello" class="com.achacker.pojo.Hello" name="hello2">
+        <property name="str" value="Spring"/>
+    </bean>
+
+    <!-- byName:会自动查找上下文中，和对象set方法后对应的beanid -->
+    <bean id="people" class="com.achacker.pojo.People" autowire="byName">
+        <constructor-arg name="age" value="0"/>
+        <property name="name" value="BigBoss"/>
+    </bean>
+</beans>
