@@ -13,7 +13,6 @@ response - 文件下载，页面刷新，图片显示，请求测试
 
 session-cookie - session用于在服务器登记用户的访问，客户端存放sessionID来查询服务器的session对象，每个浏览器有个固定的session对象
 
-
 ## MyBatis
 
 MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。
@@ -24,7 +23,17 @@ MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接�
 
 ## Spring Frameword
 
+### 基础
 
+关键词:IOC,依赖注入,xml配置,Bean自动装配,注解开发,Java方式配置Spring
+
+官方文档:[[https://docs.spring.io/spring-framework/docs/current/reference/html/](https://docs.spring.io/spring-framework/docs/current/reference/html/)
+
+Spring Boot精简了Spring的开发，大量的配置被提前设置好了，看源代码可以看到很多的注解。
+
+### 进阶
+
+关键词:AOP,代理模式,Proxy,Reflect
 
 ## 感谢
 
