@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 // @Component 组件
 // 等价与 <bean id="user" class="com.achacker.pojo.User"/>
 @Component
-public class User {
+public class Client {
     public String name = "User";
 
     @Value("11")

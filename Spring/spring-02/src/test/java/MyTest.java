@@ -1,8 +1,7 @@
 import com.achacker.config.Config;
-import com.achacker.pojo.User;
+import com.achacker.pojo.Client;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyTest {
     public static void main(String[] args) {
@@ -10,7 +9,7 @@ public class MyTest {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 
-        User user = context.getBean("user", User.class);
+        Client user = context.getBean("user", Client.class);
 
         System.out.println(user);
     }
